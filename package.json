@@ -1,0 +1,82 @@
+{
+  "author": "Antonio Da Silva <hello@pigmil.com> (https://www.pigmil.com)",
+  "name": "@asilvafx/webpack-boilerplate",
+  "version": "1.0",
+  "description": "Webpack Boilerplate - SASS/PostCSS and babel ES6/7 support.",
+  "homepage": "https://github.com/asilvafx/webpack-boilerplate#readme",
+  "browserslist": [
+    "last 2 versions",
+    "> 5%"
+  ],
+  "bugs": {
+    "url": "https://github.com/asilvafx/webpack-boilerplate/issues",
+    "email": "social@pigmil.com"
+  },
+  "contributors": [
+    {
+      "name": "Antonio Da Silva",
+      "email": "antonio@pigmil.com",
+      "url": "https://pigmil.com"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.0",
+    "autoprefixer": "^10.4.0",
+    "babel-loader": "^9.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "html-webpack-plugin": "^5.5.0",
+    "image-minimizer-webpack-plugin": "^4.0.0",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "mini-css-extract-plugin": "^2.4.4",
+    "postcss": "^8.3.11",
+    "postcss-loader": "^8.1.0",
+    "sass": "^1.50.1",
+    "sass-lint": "^1.13.1",
+    "sass-loader": "^14.1.0",
+    "terser-webpack-plugin": "^5.2.5",
+    "webpack": "^5.89.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "keywords": [
+    "webpack",
+    "boilerplate",
+    "template",
+    "setup"
+  ],
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:asilvafx/webpack-boilerplate.git"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode=production",
+    "lint:sass": "sass-lint -v -q",
+    "lint:js": "eslint --ext .js src/js/"
+  },
+  "target": "web",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "crypto-js": "^4.2.0",
+    "stream-browserify": "^3.0.0"
+  }
+}
