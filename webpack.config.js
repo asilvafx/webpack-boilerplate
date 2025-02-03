@@ -6,6 +6,7 @@ const webpack = require('webpack');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 /* eslint-disable import/no-extraneous-dependencies */
 const { merge } = require('webpack-merge');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -34,11 +35,17 @@ const environment = {
   
 module.exports = {
   entry: {
-    app: path.resolve(environment.paths.source, 'js', 'app.js'),
+    app: path.resolve(environment.paths.source, 'App.js'),
   },
   output: {
     filename: '[name].js',
     path: environment.paths.output,
+  },
+  devServer: {
+    static: './dist',
+  },
+  stats: {
+    warnings:false
   },
   mode: 'production', 
   devtool: false,
@@ -46,7 +53,7 @@ module.exports = {
     rules: [
       {
         test: /\.((c|sa|sc)ss)$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.js$/,
@@ -62,7 +69,7 @@ module.exports = {
           },
         },
         generator: {
-          filename: 'images/design/[name].[hash:6][ext]',
+          filename: 'assets/[name].[hash:6][ext]',
         },
       },
       {
@@ -74,7 +81,7 @@ module.exports = {
           },
         },
         generator: {
-          filename: 'fonts/[name].[hash:6][ext]',
+          filename: 'assets/[name].[hash:6][ext]',
         },
       },
     ],
@@ -129,7 +136,11 @@ module.exports = {
     new CleanWebpackPlugin({
       verbose: true,
       cleanOnceBeforeBuildPatterns: ['**/*', '!stats.json'],
-    }), 
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(environment.paths.source, 'index.html'),
+      filename: 'index.html',
+    }),
     new webpack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
     })

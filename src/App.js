@@ -10,7 +10,7 @@
 
 /* CSS Imports */
 
-import '../css/app.css';
+import './styles/index.css';
 
 import axios from 'axios';
 window.axios = axios;
@@ -18,10 +18,10 @@ window.axios = axios;
 import CryptoJS from 'crypto-js';
 window.CryptoJS = CryptoJS;
 
-import './color-modes.js';
+import './scripts/color-modes.js';
 
 // Start WebAuthn 
-import { WebAuthnApp } from './webauthn.js'; 
+import { WebAuthnApp } from './scripts/webauthn.js';
 const webAuthnConfig = {
     timeout: 30000
 };
