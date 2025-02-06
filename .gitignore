@@ -17,7 +17,9 @@ lerna-debug.log*
 ._*
 
 # Compiler files
+dist/
 node_modules/
+package-lock.json
 *.lock 
 *.local
 
