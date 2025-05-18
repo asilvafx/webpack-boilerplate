@@ -5,8 +5,6 @@ A versatile and production-ready Webpack boilerplate featuring SASS/PostCSS for 
 ## Features
 - **SASS/PostCSS** for modern, maintainable CSS
 - **Babel ES6/7** for next-gen JavaScript syntax
-- **WebAuthn** integration for secure authentication
-- **Theme Mode** toggle for light/dark themes
 - **Image Optimization** for reduced load times
 - **ESLint** and **SASS-Lint** for code quality
 
