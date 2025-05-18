@@ -77,8 +77,7 @@
   },
   "target": "web",
   "dependencies": {
-    "axios": "^1.7.7",
-    "crypto-js": "^4.2.0",
+    "axios": "^1.7.7", 
     "stream-browserify": "^3.0.0"
   }
 }

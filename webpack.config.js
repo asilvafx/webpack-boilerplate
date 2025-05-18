@@ -35,7 +35,7 @@ const environment = {
   
 module.exports = {
   entry: {
-    app: path.resolve(environment.paths.source, 'App.js'),
+    app: path.resolve(environment.paths.source, 'index.js'),
   },
   output: {
     filename: '[name].js',
